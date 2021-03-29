@@ -1,0 +1,20 @@
+.container {
+  width: 500px;
+  display: block;
+  margin: 50px auto;
+  padding: 10px;
+  outline: 1px black solid;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.timer {
+  font-size: 25px;
+  min-height: 100px;
+}
+
+button {
+  margin-top: 10px;
+}

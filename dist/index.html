@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Task</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+      type="text/javascript"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="bs-example">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <img src="../src/img/Penguin_90x90.jpg" class="mr-2" />
+          <div class="vl"></div>
+          <a href="#" class="ml-2 navbar-brand">Trail Lession [Grade 1-3]</a>
+          <a href="#" class="ml-2 mobileResponsive"><b>Codingal</b></a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="bs-example">
+            <div id="myModal" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">
+                      <b>Select a reason to end class</b>
+                    </h4>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-hidden="true"
+                    >
+                      ×
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="wrapper">
+                      <div class="inner">
+                        <div class="d-flex position-relative">
+                          <input type="checkbox" class="checkBox" />
+                          <label>Class completed</label>
+                        </div>
+                        <div class="position-relative">
+                          <input type="checkbox" class="checkBox" id="toggle" />
+                          <label for="toggle"
+                            >Class interrupted / aborted</label
+                          >
+                          <div class="content">
+                            <ul>
+                              <li class="d-flex position-relative">
+                                <input type="checkbox" class="checkBox" />
+                                <label
+                                  >Student didn't show up for the class</label
+                                >
+                              </li>
+                              <li class="d-flex position-relative">
+                                <input type="checkbox" class="checkBox" />
+                                <label>Studenr didn't show any interest</label>
+                              </li>
+                              <li class="d-flex position-relative">
+                                <input type="checkbox" class="checkBox" /><label
+                                  >Student got disconnected</label
+                                >
+                              </li>
+                              <li class="d-flex position-relative">
+                                <input type="checkbox" class="checkBox" /><label
+                                  >I got disconnected</label
+                                >
+                              </li>
+                              <li class="position-relative">
+                                <input
+                                  type="checkbox"
+                                  class="checkBox"
+                                  id="innerToggle"
+                                />
+                                <label for="innerToggle">other reason</label>
+                                <div class="innerContent">
+                                  <textarea
+                                    class="form-control"
+                                    id="exampleFormControlTextarea1"
+                                    rows="3"
+                                  ></textarea>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-primary endClass"
+                      class="close"
+                      data-dismiss="modal"
+                      onclick="submit()"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary endClass"
+                      class="close"
+                      data-dismiss="modal"
+                      onclick="submit()"
+                    >
+                      End class
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <h4 id="selected"></h4>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+              <div class="d-flex responsiveness">
+                <div class="timer mr-2"></div>
+                <div class="timerMsg"></div>
+                <button
+                  type="button"
+                  class="btn btn-primary endClass"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                  data-num="0"
+                >
+                  End Class
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
